@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "geminirag"
+version = "0.1.0"
+description = "A chat bot integration using RAG techniques"
+authors = ["Yab <yabuman46@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+langchain = "^0.1.12"
+chromadb = "^0.4.24"
+pypdf = "^4.1.0"
+pandas = "^2.2.1"
+langchain-google-genai = "^0.0.11"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
