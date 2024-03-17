@@ -2,7 +2,7 @@
 
 ## Project Setup with Poetry
 
-Before you start the following instruction make sure to clone and navigate to the directory
+Before you start following the instructions make sure to clone and navigate to the directory
 
 ### Installation and Activation of Poetry Shell
 
