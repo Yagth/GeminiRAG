@@ -2,6 +2,8 @@
 
 ## Project Setup with Poetry
 
+Before you start the following instruction make sure to clone and navigate to the directory
+
 ### Installation and Activation of Poetry Shell
 
 1. **Install Poetry (if not already installed):**
@@ -25,56 +27,71 @@
    poetry shell
    ```
 
+4. **Add your API key**
+   Follow the same names in the `.env.example` file and create a `.env` file including your api key
+
+5. **Run the server**
+   Run the server using the following command
+   ```bash
+   python main.py
+   ```
+
+This will run the server on `http://localhost:5000`
+
 ### Using the API Endpoints
 
 You can use `curl` as given as an example here or use any other api accessing tool like `postman` or `insomnia`
 
 1. **Chat Endpoint (`/chat`)**
 
-   - **Method:** POST
-   - **Request Body (JSON):**
+- **Method:** POST
+- **Request Body (JSON):**
 
-     ```json
-     {
-       "question": "Your question here"
-     }
-     ```
+  ```json
+  {
+    "question": "Your question here"
+  }
+  ```
 
-   - **Response (JSON):**
+- **Response (JSON):**
 
-     ```json
-     {
-       "result": "Answer retrieved from the LLM",
-       "source_documents": [
-         "Page content from document 1",
-         "Page content from document 2"
-       ]
-     }
-     ```
+  ```json
+  {
+    "result": "Answer retrieved from the LLM",
+    "source_documents": [
+      "Page content from document 1",
+      "Page content from document 2"
+    ]
+  }
+  ```
 
-   - **Example Usage (using cURL):**
+- **Example Usage (using cURL):**
 
-     ```bash
-     curl -X POST http://localhost:5000/chat -H 'Content-Type: application/json' -d '{"question": "What is the capital of France?"}'
-     ```
+  ```bash
+  curl -X POST http://localhost:5000/chat -H 'Content-Type: application/json' -d '{"question": "What is the capital of France?"}'
+  ```
 
 2. **Upload Endpoint (`/upload`)**
 
-   - **Method:** POST
-   - **Request Body (Multipart Form):**
+- **Method:** POST
+- **Request Body (Multipart Form):**
 
-     A file named `document` containing the PDF document to be processed.
+  A file named `document` containing the PDF document to be processed.
 
-   - **Response (JSON):**
+- **Response (JSON):**
 
-     ```json
-     {
-       "message": "Document uploaded successfully."
-     }
-     ```
+  ```json
+  {
+    "message": "Document uploaded successfully."
+  }
+  ```
 
-   - **Example Usage (using cURL):**
+- **Example Usage (using cURL):**
 
-     ```bash
-     curl -X POST http://localhost:5000/upload -F 'document=@path/to/your/document.pdf'
-     ```
+  ```bash
+  curl -X POST http://localhost:5000/upload -F 'document=@path/to/your/document.pdf'
+  ```
+
+```
+
+```
