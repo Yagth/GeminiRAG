@@ -1,11 +1,6 @@
-import urllib
 import warnings
-from pathlib import Path as p
-from pprint import pprint
 
-import pandas as pd
 from langchain.prompts import PromptTemplate
-from langchain.chains.question_answering import load_qa_chain
 from langchain_community.document_loaders import PyPDFLoader
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain_community.vectorstores import Chroma
@@ -13,15 +8,10 @@ from langchain.chains import RetrievalQA
 from langchain.memory import ConversationBufferMemory
 from langchain_google_genai import ChatGoogleGenerativeAI, GoogleGenerativeAIEmbeddings
 
-# from llm import FILE_PATH, GOOGLE_API_KEY
+from llm import FILE_PATH, GOOGLE_API_KEY
 
 warnings.filterwarnings("ignore")
 
-
-import os
-
-GOOGLE_API_KEY = "AIzaSyBKc-zB8RCnO0DdhE_QZ0Ii-3QsbqR1gyA"
-FILE_PATH = "./doc/Retrieval-Augmented Generation for.pdf"
 
 model = ChatGoogleGenerativeAI(
     model="gemini-pro",
