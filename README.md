@@ -40,6 +40,8 @@
 
 ### Using the API Endpoints
 
+You can use `curl` as given as an example here or use any other api accessing tool like `postman` or `insomnia`
+
 1. **Chat Endpoint (`/chat`)**
 
    - **Method:** POST
