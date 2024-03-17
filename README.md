@@ -6,23 +6,10 @@
 
 1. **Install Poetry (if not already installed):**
 
-   Download the official installer for your operating system from [invalid URL removed].
+   Download the official installer for your operating system from [Python Poetry Documentation](https://python-poetry.org/docs/).
    Follow the installation instructions based on your OS.
 
-2. **Create a New Project:**
-
-   Open a terminal or command prompt and navigate to your desired project directory.
-   Run the following command to create a new Poetry project named my-llm-project:
-
-   ```bash
-   poetry init --name my-llm-project
-   ```
-
-   Your project directory will now have a `pyproject.toml` file (Poetry configuration) and a `poetry.lock` file (dependency lock).
-   You'll likely have additional files related to your llm package (e.g., `qa_chain.py`, `vector_database.py`, `embeddings.py`).
-   Consider creating a `doc` directory to store uploaded PDFs (if applicable).
-
-3. **Install Packages:**
+2. **Install Packages:**
 
    Run the following command to install the required packages for your project:
 
@@ -30,7 +17,7 @@
    poetry install
    ```
 
-4. **Activate Poetry Shell:**
+3. **Activate Poetry Shell:**
 
    To activate the Poetry shell and work within the project's virtual environment, run:
 
